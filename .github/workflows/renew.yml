@@ -1,6 +1,8 @@
 name: XServerII-VPS
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *'
 
 jobs:
   run_xserver_renew:
