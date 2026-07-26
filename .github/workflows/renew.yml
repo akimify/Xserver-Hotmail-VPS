@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run_xserver_renew:
+  run_xserverII_renew:
     runs-on: ubuntu-latest
     steps:
       - name: 📥 下载私库脚本
