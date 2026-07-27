@@ -2,6 +2,10 @@ name: XServerII-VPS
 on:
   workflow_dispatch:
 
+permissions:
+  actions: write
+  contents: read
+
 jobs:
   run_xserverII_renew:
     runs-on: ubuntu-latest
@@ -94,6 +98,7 @@ jobs:
                   print(f"❌ TG 推送失败：{e}")
           EOF
           gh run cancel ${{ github.run_id }} --repo ${{ github.repository }}
+          sleep 30
 
       - name: 🛠️ 安装系统依赖
         run: |
